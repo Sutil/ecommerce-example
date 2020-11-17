@@ -1,3 +1,4 @@
+import { ProductViewModule } from './../product-view/product-view.module';
 import { FooterModule } from './../footer/footer.module';
 import { HeaderModule } from './../header/header.module';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { HomeComponent } from './home.component';
     CommonModule,
     HeaderModule,
     FooterModule,
+    ProductViewModule,
   ],
   exports: [HomeComponent]
 })
