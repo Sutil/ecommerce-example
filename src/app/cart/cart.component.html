@@ -1,0 +1,17 @@
+<div class="cart">
+  Meu carrinho
+
+  <div class="items">
+    <div *ngFor="let item of items" class="item">
+      <span class="name">{{item.product.name}}</span>
+      <span class="price">{{ item.product.price | currency:'BRL':true }}</span>
+      <div class="btns">
+        <button>-</button>
+        <span class="count">2</span>
+        <button>+</button>
+      </div>
+      <span class="subtotal">Subtotal: {{ item.product.price * item.count  | currency:'BRL': true }}</span>
+    </div>
+
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { CartModule } from './../cart/cart.module';
 import { ProductViewModule } from './../product-view/product-view.module';
 import { FooterModule } from './../footer/footer.module';
 import { HeaderModule } from './../header/header.module';
@@ -16,6 +17,7 @@ import { HomeComponent } from './home.component';
     HeaderModule,
     FooterModule,
     ProductViewModule,
+    CartModule,
   ],
   exports: [HomeComponent]
 })
