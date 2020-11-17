@@ -3,7 +3,7 @@
   <section class="content">
     <div class="items-content">
       <ng-container *ngFor="let item of items" >
-        <app-product-view></app-product-view>
+        <app-product-view [product]="item" ></app-product-view>
       </ng-container>
     </div>
   </section>

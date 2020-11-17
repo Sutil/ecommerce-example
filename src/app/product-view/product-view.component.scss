@@ -1,10 +1,42 @@
 .container {
   height: 400px;
-  width: 200px;
+  width: 250px;
   border-radius: 10px;
   box-shadow: 0 0 10px #cccccc;
 
   &:hover {
     box-shadow: 0 0 20px #cccccc;
+  }
+
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .value {
+    color: green;
+    font-size: 18px;
+  }
+
+  .count-control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #cccccc;
+    border-radius: 17px;
+
+    button {
+      outline: none;
+      background-color: green;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: none;
+      color: white;
+    }
   }
 }

@@ -1,4 +1,5 @@
-import { CartItem } from './../cart-item';
+import { items } from './database';
+import { Product } from './../product';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,23 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  items: CartItem[] = [];
+  items: Product[] = items;
 
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < 7; i++) {
-      const item = {
-        product: {
-          id: 1,
-          nome: 'Test',
-          url: 'sss',
-          valor: 10,
-        },
-      count: 2,
-      };
-      this.items.push(item);
-    }
   }
 
 }

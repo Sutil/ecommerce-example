@@ -1,10 +1,14 @@
 <div class="container">
-  <div class="image"></div>
-  <div class="nome">
-    nome
+  <div class="image">
+    <img src="{{ product.url }}" />
   </div>
-  <div class="valor">R$ 100,99</div>
-  <div class="botoes">
-    mais e menos
+  <div class="nome">
+    {{product.name}}
+  </div>
+  <div class="value">{{ product.price | currency:'BRL': true }}</div>
+  <div class="count-control">
+    <button type="button" (click)="remove()" >-</button>
+    <span>{{ count }}</span>
+    <button type="button" (click)="add()" >+</button>
   </div>
 </div>
