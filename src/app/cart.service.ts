@@ -3,12 +3,20 @@ import { CartItem } from './cart-item';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+/**
+ * Escreva uma documentação explicando o 
+ * propósito da classe.
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  cart = new BehaviorSubject<CartItem[]>([]);
+  /**
+   * Escreva uma documenteção explicando o propósito 
+   * do subject. O que ele controla e qual o tipo de dado que ele emite.
+   */
+  readonly cart = new BehaviorSubject<CartItem[]>([]);
 
   add(product: Product): void {
     const items = this.getItems();
