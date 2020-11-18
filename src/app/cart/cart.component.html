@@ -1,4 +1,4 @@
-<div class="cart">
+<div class="cart" [class.active]="showCart">
   Meu carrinho
 
   <div class="items">
@@ -6,9 +6,9 @@
       <span class="name">{{item.product.name}}</span>
       <span class="price">{{ item.product.price | currency:'BRL':true }}</span>
       <div class="btns">
-        <button>-</button>
-        <span class="count">2</span>
-        <button>+</button>
+        <button (click)="remove(item.product)">-</button>
+        <span class="count">{{ item.count }}</span>
+        <button (click)="add(item.product)">+</button>
       </div>
       <span class="subtotal">Subtotal: {{ item.product.price * item.count  | currency:'BRL': true }}</span>
     </div>

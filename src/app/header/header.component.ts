@@ -1,3 +1,4 @@
+import { ShowCartService } from './../show-cart.service';
 import { CartService } from './../cart.service';
 import { Subscription } from 'rxjs';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   countItens = 0;
 
   subscription: Subscription;
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private showCartService: ShowCartService) { }
 
   ngOnInit(): void {
     this.subscription = this.cartService.cart.pipe(
@@ -24,6 +25,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  toggleCart(): void {
+    this.showCartService.toggle();
   }
 
 }
